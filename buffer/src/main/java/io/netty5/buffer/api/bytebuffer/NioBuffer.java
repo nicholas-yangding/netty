@@ -146,8 +146,6 @@ final class NioBuffer extends AdaptableBuffer<NioBuffer>
 
     @Override
     public NioBuffer skipWritable(int delta) {
-        checkPositiveOrZero(delta, "delta");
-        writerOffset(writerOffset() + delta);
         return (NioBuffer) super.skipWritable(delta);
     }
 
